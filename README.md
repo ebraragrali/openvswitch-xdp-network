@@ -97,3 +97,11 @@ DROP: BLOCKME detected
 - bpftool
 - Wireshark
 - Linux Networking
+
+## Test Result
+
+The XDP filter was tested with an HTTP request containing the `BLOCKME` keyword.
+
+Wireshark shows the `/BLOCKME` request followed by repeated TCP retransmissions, demonstrating that the filtered traffic does not successfully complete the connection.
+
+![XDP Packet Filtering Test](screenshots/wireshark-xdp-test.png)
